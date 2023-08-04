@@ -6,7 +6,7 @@ import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      // initialRoute: '/home',
+      initialRoute: CustomRoutes.homeRoute,
       routes: {
-        '/': (context) => LoginPage(),
-        CustomRoutes.homeRoute: (context) => HomePage(),
-        CustomRoutes.loginRoute: (context) => LoginPage()
+        '/': (context) => const LoginPage(),
+        CustomRoutes.homeRoute: (context) => const HomePage(),
+        CustomRoutes.loginRoute: (context) => const LoginPage()
       },
     );
   }
